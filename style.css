@@ -4,5 +4,14 @@
 
 footer {
     border-top: 1px solid black;
-    padding-top: 5px;
+    margin-top: 5px;
+}
+
+li:has(a) {
+    padding: 10px;
+}
+
+img {
+    width: 70vw;
+    max-width: 700px;
 }
