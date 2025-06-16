@@ -9,82 +9,69 @@
 </head>
 
 <body>
-  <header>
-    <h1>Enciclopédia dos Macacos em Extinção</h1>
-    <p>Aqui você pode realizar uma adoção simbólica e contribuir com a preservação de espécies ameaçadas!</p>
-  </header>
-
   <nav aria-label="Navegação principal">
     <ul>
       <li><a href="../">Início</a></li>
       <li><a href="../especies">Espécies</a></li>
       <li><a href="../curiosidades">Curiosidades</a></li>
-      <li><a href="./">Formulário de Adoção</a></li>
+      <li class="selected"><a href="./">Adoção</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section>
-      <article>
-        <header>
-          <h2>Formulário de Adoção Simbólica</h2>
-        </header>
-
-        <form>
-          <fieldset>
-            <legend>Dados do interessado</legend>
-
-            <label for="nome">Nome completo:</label><br />
-            <input type="text" id="nome" name="nome" minlength="4" required /><br />
-
-            <label for="email">E-mail:</label><br />
-            <input type="email" id="email" name="email" required /><br />
-
-            <label for="telefone">Telefone:</label><br />
-            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="11987654321" required /><br />
-
-            <label for="senha">Senha de acesso (4–6 caracteres):</label><br />
-            <input type="password" id="senha" name="senha" minlength="4" maxlength="6" required /><br />
-          </fieldset>
-
-          <fieldset>
-            <legend>Informações sobre a adoção</legend>
-
-            <label for="dataVisita">Data da visita (entre 01/01/2025 e 30/06/2025):</label><br />
-            <input type="date" id="dataVisita" name="dataVisita" min="2025-01-01" max="2025-06-30" required /><br />
-
-            <label for="horario">Horário preferido (entre 08:00 e 18:00):</label><br />
-            <input type="time" id="horario" name="horario" min="08:00" max="18:00" required /><br />
-
-            <label for="especie">Macaco escolhido:</label><br />
-            <select id="especie" name="especie" required>
-              <option value="">Selecione...</option>
-              <option value="1">Macaco-prego-dourado</option>
-              <option value="2">Bugio-marrom-do-norte</option>
-              <option value="3" selected>Macaco-aranha-de-cara-branca</option>
-              <option value="4">Macaco-narigudo-de-tonkin</option>
-              <option value="5">Zogue-zogue-de-Alta Floresta</option>
-            </select><br />
-
-            <label for="motivo">Por que você deseja adotar simbolicamente essa espécie?</label><br />
-            <textarea id="motivo" name="motivo" rows="4" cols="40" required></textarea><br />
-
-            <label for="foto">Envie uma foto sua (.jpg):</label><br />
-            <input type="file" id="foto" name="foto" accept="image/jpeg" required /><br />
-
-            <p>Você já contribuiu antes com algum projeto de conservação?</p>
-            <label><input type="radio" name="experiencia" value="sim" checked /> Sim</label>
-            <label><input type="radio" name="experiencia" value="nao" /> Não</label><br />
-
-            <label for="nota">Nota para o nosso site (0.1 a 10.0):</label><br />
-            <input type="number" id="nota" name="nota" min="0.1" max="10.0" step="0.01" required /><br />
-          </fieldset>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </article>
-    </section>
-  </main>
+  <div class="row">
+    <main>
+      <header>
+        <h1>Enciclopédia dos Macacos em Extinção</h1>
+        <p>Aqui você pode realizar uma adoção simbólica e contribuir com a preservação de espécies ameaçadas!</p>
+      </header>
+      <section>
+        <article>
+          <header>
+            <h2>Formulário de Adoção Simbólica</h2>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Dados do interessado</legend>
+              <label for="nome">Nome completo:</label>
+              <input type="text" id="nome" name="nome" minlength="4" required />
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required />
+              <label for="telefone">Telefone:</label>
+              <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="11987654321" required />
+              <label for="senha">Senha de acesso (4–6 caracteres):</label>
+              <input type="password" id="senha" name="senha" minlength="4" maxlength="6" required />
+            </fieldset>
+            <fieldset>
+              <legend>Informações sobre a adoção</legend>
+              <label for="dataVisita">Data da visita (entre 01/01/2025 e 30/06/2025):</label>
+              <input type="date" id="dataVisita" name="dataVisita" min="2025-01-01" max="2025-06-30" required />
+              <label for="horario">Horário preferido (entre 08:00 e 18:00):</label>
+              <input type="time" id="horario" name="horario" min="08:00" max="18:00" required />
+              <label for="especie">Macaco escolhido:</label>
+              <select id="especie" name="especie" required>
+                <option value="">Selecione...</option>
+                <option value="1">Macaco-prego-dourado</option>
+                <option value="2">Bugio-marrom-do-norte</option>
+                <option value="3" selected>Macaco-aranha-de-cara-branca</option>
+                <option value="4">Macaco-narigudo-de-tonkin</option>
+                <option value="5">Zogue-zogue-de-Alta Floresta</option>
+              </select>
+              <label for="motivo">Por que você deseja adotar simbolicamente essa espécie?</label>
+              <textarea id="motivo" name="motivo" rows="4" cols="40" required></textarea>
+              <label for="foto">Envie uma foto sua (.jpg):</label>
+              <input type="file" id="foto" name="foto" accept="image/jpeg" required />
+              <p>Você já contribuiu antes com algum projeto de conservação?</p>
+              <label><input type="radio" name="experiencia" value="sim" checked /> Sim</label>
+              <label><input type="radio" name="experiencia" value="nao" /> Não</label>
+              <label for="nota">Nota para o nosso site (0.1 a 10.0):</label>
+              <input type="number" id="nota" name="nota" min="0.1" max="10.0" step="0.01" required />
+            </fieldset>
+            <button type="submit">Enviar</button>
+          </form>
+        </article>
+      </section>
+    </main>
+  </div>
 
   <footer>
     <p>Feito por Saulo Beltrame, Thiago Yamanoi e João Vitor Piovezan</p>
